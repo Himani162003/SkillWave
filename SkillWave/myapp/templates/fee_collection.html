@@ -1,0 +1,577 @@
+<!-- /* 
+* Template Name: Learner
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/  -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href='tfavicon.png'>
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Display+Playfair:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+  {% load static %}
+  <style>
+    .bc{
+      background-image: url("{% static 'images/hero-img-1-min.jpg' %}");
+    }
+  </style>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <title>SkillWave Free Bootstrap Template by Untree.co</title>
+  
+</head>
+
+<body>
+
+  <div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+
+  
+<nav class="site-nav mb-5" style="background-color: #007bff;">
+    <div class="pb-2 top-bar mb-3">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-lg-6">
+            <img src="../../static/images/image.jpg" style="height: 35px; width: auto; margin-right: 15px;">
+            <a href="#" class="small mr-3"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block">9227774545</span></a> 
+            <a href="#" class="small mr-3"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block">ctfindia@gmail.com</span></a>
+            <!-- <a href="{% url 'member_logout' id %}" class="large mr-3">
+              <span class="uil uil-signout"></span> 
+              <span class="d-none d-lg-inline-block">Logout</span>
+            </a> -->
+          </div>
+
+          
+          
+          <div class="col-6 col-lg-3 text-right" style="color: aliceblue;">Member : {{ member.member_name }}</div>
+          <div class="col-6 col-lg-3 text-right" style="color: aliceblue;">Admin : {{ admin.name }}</div>
+          <!-- <div class="col-6 col-lg-3 text-right" style="color: aliceblue;">logout</div> -->
+
+        </div>
+      </div>
+    </div>
+    <div class="sticky-nav js-sticky-header" style="background-color: #007bff;">
+      <div class="container position-relative">
+        <div class="site-navigation text-center">
+          <a href="{% url 'index' id %}" class="logo menu-absolute m-0">SkillWave<span class="text-primary"></span></a>
+
+          <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
+            <li class="active"><a href="{% url 'index' id %}">Home</a></li>
+            <li class="has-children">
+              <a href="#">Student</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'student_registration' id %}">Register Student</a></li>              
+                <li><a href="{% url 'student_list' id %}">Student List</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="#">Course</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'course_registration' id %}">Add New Course</a></li>
+                <li><a href="{% url 'course_list' id %}">Course list</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="#">Enrollment</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'enrollment_registration' id %}">New Enrollment</a></li>
+                <li><a href="{% url 'enrollment_list' id %}">Enrollment list</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="#">Idcard</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'generate_idcard' id %}">Generate Idcard</a></li>
+                <li><a href="{% url 'idcard_list' id %}">Idcard list</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="#">Fees</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'fee_collection' id %}">Fees Collection</a></li>
+                <li><a href="{% url 'fee_list' id %}">Fees list</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="#">Certificate</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'certificate_generate' id %}">Generate Certificate</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <a href="#" class="btn-book btn btn-secondary btn-sm menu-absolute">Enroll Now</a>
+
+          <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+            <span></span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+</nav>
+<div style="margin-top: 150px;"></div>
+
+<div class="container" style="margin-bottom: 20px;">
+    <h2 class="text-center mb-4">Fees Collection</h2>
+
+<!-- Fees Collection Form -->
+<!-- <div class="card p-4">
+    <form id="feeForm" method="POST" action="{% url 'fee_collection' id  %}">
+        {% csrf_token %} -->
+        <!-- <div class="mb-3">
+            <label for="student_name" class="form-label">Student Name</label>
+              <select name="student_name" id="student_name" required class="form-control">
+                <option value="" disabled selected>Select Student</option>
+                {% for student in enrollment %}
+                    <option value="{{ student.student_id }}">{{ student.student_id.name }}</option>
+                {% endfor %}
+              </select>
+        </div> -->
+        <!-- <div class="mb-3">
+            <label for="recepit_no" class="form-label">Receipt number</label>
+            <input type="number" class="form-control" id="recepit_no" name="recepit_no" required>
+        </div> -->
+        <!-- <div class="mb-3">
+            <label for="enrollment_id" class="form-label">Enrollment ID</label>
+            <select name="enrollment_id" id="enrollment_id" required class="form-control">
+              <option value="" disabled selected>Select Enrollment</option>
+              {% for enrollment in enrollment %}
+                  <option value="{{ enrollment.enroll_id }}">{{ enrollment.enrollment_number }}</option>
+              {% endfor %}
+            </select> -->
+            <!-- <input type="number" class="form-control" id="enrollment_id" name="enrollment_id" required> -->
+        <!-- </div> -->
+        <!-- <div class="mb-3">
+            <label for="course_name" class="form-label">Course Name</label>
+            <select name="course_name" id="course_name" required class="form-control">
+              <option value="" disabled selected>Select Course</option>
+              {% for course in course %}
+                  <option value="{{ course.course_id }}">{{ course.course_name }}</option>
+              {% endfor %}
+            </select>
+        </div> -->
+        <!-- <div class="mb-3">
+            <label for="total_amount" class="form-label">Total Amount</label>
+            <input type="number" class="form-control" id="total_amount" name="total_amount" required>
+        </div>      
+        <div class="mb-3">
+            <label for="paid_amount" class="form-label">Paid Amount</label>
+            <input type="number" class="form-control" id="paid_amount" name="paid_amount" required>
+        </div>
+        <div class="mb-3">
+            <label for="total_paid_amount" class="form-label">Total Paid Amount</label>
+            <input type="number" class="form-control" id="total_paid_amount" name="total_paid_amount" required>
+        </div>
+        <div class="mb-3">
+            <label for="payment_mode" class="form-label">Payment Mode</label>
+            <select name="payment_mode" id="payment_mode" required class="form-control">
+              <option value="" disabled selected>Select Payment Mode</option>
+              <option value="online">Online</option>
+              <option value="Offline">Offline</option> -->
+              <!-- {% for course in course %}
+                  <option value="{{ course.course_id }}">{{ course.course_name }}</option>
+              {% endfor %} -->
+            <!-- </select> -->
+            <!-- <input type="text" class="form-control" id="payment_mode" name="payment_mode" required> -->
+        <!-- </div>
+        <div class="mb-3">
+            <label for="received_date" class="form-label">Received Date</label>
+            <input type="date" class="form-control" id="received_date" name="received_date" required>
+        </div> -->
+        <!-- <div class="mb-3">
+            <label for="created_at" class="form-label">Created At</label>
+            <input type="date" class="form-control" id="created_at" name="created_at" required>
+        </div> -->
+        <!-- <button type="submit" class="btn btn-primary w-100">Register Fees</button>
+        <p style="color: red;">{{ error }}</p>
+    </form>
+</div>
+</div> -->
+    
+<!-- Fees Collection Form -->
+<div class="card p-4">
+  <form id="feeForm" method="POST" action="{% url 'fee_collection' id  %}" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="mb-3">
+          <label for="student_name" class="form-label">Student Name</label>
+            <select name="student_name" id="student_name" required class="form-control" onchange="loadStudentDetails()">
+              <option value="" disabled selected>Select Student</option>
+              {% for student in student %}
+                  <option value="{{ student.student_id }}" data-name="{{ student.name }}">
+                      {{ student.name }}
+                  </option>
+              {% endfor %}
+            </select>
+      </div>
+      <!-- <div class="mb-3">
+          <label for="recepit_no" class="form-label">Receipt number</label>
+          <input type="number" class="form-control" id="recepit_no" name="recepit_no" required>
+      </div> -->
+      <div class="mb-3">
+          <label for="enrollment_id" class="form-label">Enrollment ID</label>
+          <select class="form-control" id="enrollment_id" name="enrollment_id" required onchange="loadEnrollmentDetails()">
+              <option value="">Select Enrollment ID</option>
+              {% for e in enrollment_data %}
+                  <option value="{{ e.enroll_id }}" 
+                          data-student-name="{{ e.student_name }}" 
+                          data-course-id="{{ e.course_id }}" 
+                          data-course-fees="{{ e.course_fees }}"
+                          data-total-paid="{{ e.total_paid }}">
+                      {{ e.enroll_id }} - {{ e.student_name }} (Paid: ₹{{ e.total_paid }})
+                  </option>
+              {% endfor %}
+          </select>
+      </div>
+      
+      <div class="mb-3">
+          <label for="course_name" class="form-label">Course Name</label>
+          <select class="form-control" id="course_name" name="course_name" required onchange="loadCourseFees()">
+              <option value="">Select Course</option>
+              {% for c in course %}
+                  <option value="{{ c.course_id }}" data-fees="{{ c.fees }}">
+                      {{ c.course_name }} (₹{{ c.fees }})
+                  </option>
+              {% endfor %}
+          </select>
+      </div>
+      
+      <div class="mb-3">
+          <label for="total_amount" class="form-label">Total Amount</label>
+          <input type="number" class="form-control" id="total_amount" name="total_amount" readonly>
+      </div>
+      
+      <div class="mb-3">
+          <label for="total_paid_amount" class="form-label">Total Paid Amount</label>
+          <input type="number" class="form-control" id="total_paid_amount" name="total_paid_amount" readonly>
+      </div>
+      
+      <div class="mb-3">
+          <label for="remaining_amount" class="form-label">Remaining Amount</label>
+          <input type="number" class="form-control" id="remaining_amount" readonly>
+      </div>
+      
+      <div class="mb-3">
+          <label for="paid_amount" class="form-label">Amount to Pay Now</label>
+          <input type="number" class="form-control" id="paid_amount" name="paid_amount" required onchange="validatePaidAmount()">
+          <small class="form-text text-muted">Enter the amount you want to pay now</small>
+      </div>
+      
+      <div class="mb-3">
+          <label for="payment_mode" class="form-label">Payment Mode</label>
+          <select name="payment_mode" id="payment_mode" required class="form-control" onchange="showPaymentDetails()">
+              <option value="" disabled selected>Select Payment Mode</option>
+              <option value="1">Cash</option>
+              <option value="2">UPI</option>
+              <option value="3">Bank Transfer</option>
+              <option value="4">Cheque</option>
+              <option value="5">Credit Card</option>
+              <option value="6">Debit Card</option>
+              <option value="7">Net Banking</option>
+          </select>
+      </div>
+      
+      <div id="paymentDetails" style="display: none;">
+          <div class="mb-3" id="upiDetails">
+              <label for="upi_id" class="form-label">UPI ID</label>
+              <input type="text" class="form-control" id="upi_id" name="upi_id">
+          </div>
+          <div class="mb-3" id="bankTransferDetails">
+              <label for="bank_transfer_id" class="form-label">Bank Transfer ID</label>
+              <input type="text" class="form-control" id="bank_transfer_id" name="bank_transfer_id">
+          </div>
+          <div class="mb-3" id="creditCardDetails">
+              <label for="credit_card_number" class="form-label">Credit Card Number</label>
+              <input type="text" class="form-control" id="credit_card_number" name="credit_card_number">
+          </div>
+          <div class="mb-3" id="debitCardDetails">
+              <label for="debit_card_number" class="form-label">Debit Card Number</label>
+              <input type="text" class="form-control" id="debit_card_number" name="debit_card_number">
+          </div>
+          <div class="mb-3" id="netBankingDetails">
+              <label for="net_banking_id" class="form-label">Net Banking ID</label>
+              <input type="text" class="form-control" id="net_banking_id" name="net_banking_id">
+          </div>
+      </div>
+      
+      <div class="mb-3">
+          <label for="received_date" class="form-label">Received Date</label>
+          <input type="date" class="form-control" id="received_date" name="received_date" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Submit Payment</button>
+      <p style="color: red;">{{ error }}</p>
+  </form>
+</div>
+</div>
+
+<br>
+<div class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 mr-auto">
+        <div class="widget">
+          <h3>About Us<span class="text-primary">.</span> </h3>
+          <p>SkillWave is a cutting-edge learning platform designed to provide industry-relevant education. We offer expert-led courses, hands-on training, and career-focused learning opportunities.</p>
+        </div> <!-- /.widget -->
+        <div class="widget">
+          <h3>Connect</h3>
+          <ul class="list-unstyled social">
+            <li><a href="#"><span class="icon-instagram"></span></a></li>
+            <li><a href="#"><span class="icon-twitter"></span></a></li>
+            <li><a href="#"><span class="icon-facebook"></span></a></li>
+            <li><a href="#"><span class="icon-linkedin"></span></a></li>
+            <li><a href="#"><span class="icon-pinterest"></span></a></li>
+            <li><a href="#"><span class="icon-dribbble"></span></a></li>
+          </ul>
+        </div> <!-- /.widget -->
+      </div> <!-- /.col-lg-3 -->
+      <div class="col-lg-2 ml-auto">
+        <div class="widget">
+          <h3>Projects</h3>
+          <ul class="list-unstyled float-left links">
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">HTML5</a></li>
+            <li><a href="#">CSS3</a></li>
+            <li><a href="#">jQuery</a></li>
+            <li><a href="#">Bootstrap</a></li>
+          </ul>
+        </div> <!-- /.widget -->
+      </div> <!-- /.col-lg-3 -->
+      <div class="col-lg-3">
+        <div class="widget">
+          <h3>Gallery</h3>
+          <ul class="instafeed instagram-gallery list-unstyled">
+            <li><a class="instagram-item" href="static/images/gal_1.jpg" data-fancybox="gal"><img src="{% static 'images/gal_1.jpg' %}" alt="" width="72" height="72"></a>
+            </li>
+            <li><a class="instagram-item" href="static/images/gal_2.jpg" data-fancybox="gal"><img src="{% static 'images/gal_2.jpg' %}" alt="" width="72" height="72"></a>
+            </li>
+            <li><a class="instagram-item" href="static/images/gal_3.jpg" data-fancybox="gal"><img src="{% static 'images/gal_3.jpg' %}" alt="" width="72" height="72"></a>
+            </li>
+            <li><a class="instagram-item" href="static/images/gal_4.jpg" data-fancybox="gal"><img src="{% static 'images/gal_4.jpg' %}" alt="" width="72" height="72"></a>
+            </li>
+            <li><a class="instagram-item" href="static/images/gal_5.jpg" data-fancybox="gal"><img src="{% static 'images/gal_5.jpg' %}" alt="" width="72" height="72"></a>
+            </li>
+            <li><a class="instagram-item" href="static/images/gal_6.jpg" data-fancybox="gal"><img src="{% static 'images/gal_6.jpg' %}" alt="" width="72" height="72"></a>
+            </li>
+          </ul>
+        </div> <!-- /.widget -->
+      </div> <!-- /.col-lg-3 -->
+      <div class="col-lg-3">
+        <div class="widget">
+          <h3>Contact</h3>
+          <address>First Floor, "B" Mangaltirth Complex, Nr. Overbridge, Dharnidhar BRTS, Vasna, Ahmedabad-38007, Gujarat</address>
+          <ul class="list-unstyled links mb-4">
+              <li><a href="tel://11234567890">+91 9227774545</a></li>
+              <li><a href="tel://11234567890">+91 9227778181</a></li>
+              <li><a href="mailto:info@mydomain.com">ctfindia@gmail.com</a></li>
+          </ul>
+        </div> <!-- /.widget -->
+      </div> <!-- /.col-lg-3 -->
+    </div> <!-- /.row -->
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a>  Distributed By <a href="https://themewagon.com">ThemeWagon</a> <!-- License information: https://untree.co/license/ -->
+        </div>
+      </div>
+    </div> <!-- /.container -->
+  </div> <!-- /.site-footer -->
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+<script src="{% static 'js/jquery.sticky.js' %}"></script>
+<script src="{% static 'js/aos.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+
+<script>
+  function loadCourseFees() {
+      const courseSelect = document.getElementById('course_name');
+      const totalAmountInput = document.getElementById('total_amount');
+      const selectedOption = courseSelect.options[courseSelect.selectedIndex];
+      
+      if (selectedOption.value) {
+          const fees = selectedOption.getAttribute('data-fees');
+          totalAmountInput.value = fees;
+          calculateRemainingAmount();
+      } else {
+          totalAmountInput.value = '';
+          document.getElementById('remaining_amount').value = '';
+      }
+  }
+  
+  function loadEnrollmentDetails() {
+      const enrollmentSelect = document.getElementById('enrollment_id');
+      const courseSelect = document.getElementById('course_name');
+      const totalAmountInput = document.getElementById('total_amount');
+      const totalPaidAmountInput = document.getElementById('total_paid_amount');
+      const selectedOption = enrollmentSelect.options[enrollmentSelect.selectedIndex];
+      
+      if (selectedOption.value) {
+          const courseId = selectedOption.getAttribute('data-course-id');
+          const courseFees = selectedOption.getAttribute('data-course-fees');
+          const totalPaid = selectedOption.getAttribute('data-total-paid');
+          
+          // Set the course
+          for (let option of courseSelect.options) {
+              if (option.value === courseId) {
+                  courseSelect.value = courseId;
+                  break;
+              }
+          }
+          
+          // Set the total amount and total paid amount
+          totalAmountInput.value = courseFees;
+          totalPaidAmountInput.value = totalPaid;
+          calculateRemainingAmount();
+      }
+  }
+  
+  function calculateRemainingAmount() {
+      const totalAmount = parseFloat(document.getElementById('total_amount').value) || 0;
+      const totalPaidAmount = parseFloat(document.getElementById('total_paid_amount').value) || 0;
+      const remainingAmount = totalAmount - totalPaidAmount;
+      document.getElementById('remaining_amount').value = remainingAmount.toFixed(2);
+  }
+  
+  function validatePaidAmount() {
+      const paidAmount = parseFloat(document.getElementById('paid_amount').value) || 0;
+      const remainingAmount = parseFloat(document.getElementById('remaining_amount').value) || 0;
+      
+      if (paidAmount > remainingAmount) {
+          alert('Paid amount cannot be greater than remaining amount!');
+          document.getElementById('paid_amount').value = '';
+      }
+  }
+
+  function showPaymentDetails() {
+      const paymentMode = document.getElementById('payment_mode').value;
+      const paymentDetails = document.getElementById('paymentDetails');
+      const upiDetails = document.getElementById('upiDetails');
+      const bankTransferDetails = document.getElementById('bankTransferDetails');
+      const creditCardDetails = document.getElementById('creditCardDetails');
+      const debitCardDetails = document.getElementById('debitCardDetails');
+      const netBankingDetails = document.getElementById('netBankingDetails');
+      
+      // Hide all payment details first
+      upiDetails.style.display = 'none';
+      bankTransferDetails.style.display = 'none';
+      creditCardDetails.style.display = 'none';
+      debitCardDetails.style.display = 'none';
+      netBankingDetails.style.display = 'none';
+      
+      // Show relevant payment details
+      if (paymentMode === '2') {
+          paymentDetails.style.display = 'block';
+          upiDetails.style.display = 'block';
+      } else if (paymentMode === '3') {
+          paymentDetails.style.display = 'block';
+          bankTransferDetails.style.display = 'block';
+      } else if (paymentMode === '5') {
+          paymentDetails.style.display = 'block';
+          creditCardDetails.style.display = 'block';
+      } else if (paymentMode === '6') {
+          paymentDetails.style.display = 'block';
+          debitCardDetails.style.display = 'block';
+      } else if (paymentMode === '7') {
+          paymentDetails.style.display = 'block';
+          netBankingDetails.style.display = 'block';
+      } else {
+          paymentDetails.style.display = 'none';
+      }
+  }
+
+  function loadStudentDetails() {
+      const studentSelect = document.getElementById('student_name');
+      const selectedOption = studentSelect.options[studentSelect.selectedIndex];
+      const studentId = selectedOption.value;
+      const studentName = selectedOption.getAttribute('data-name');
+      
+      if (studentId) {
+          // Find and select the corresponding enrollment
+          const enrollmentSelect = document.getElementById('enrollment_id');
+          const enrollmentOptions = enrollmentSelect.options;
+          let found = false;
+          
+          for (let i = 0; i < enrollmentOptions.length; i++) {
+              const option = enrollmentOptions[i];
+              if (option.getAttribute('data-student-name') === studentName) {
+                  enrollmentSelect.selectedIndex = i;
+                  found = true;
+                  break;
+              }
+          }
+          
+          if (found) {
+              // Get the selected enrollment option
+              const selectedEnrollmentOption = enrollmentSelect.options[enrollmentSelect.selectedIndex];
+              const courseId = selectedEnrollmentOption.getAttribute('data-course-id');
+              
+              // Find and select the corresponding course
+              const courseSelect = document.getElementById('course_name');
+              const courseOptions = courseSelect.options;
+              
+              for (let i = 0; i < courseOptions.length; i++) {
+                  if (courseOptions[i].value === courseId) {
+                      courseSelect.selectedIndex = i;
+                      break;
+                  }
+              }
+              
+              // Now load all the enrollment details
+              loadEnrollmentDetails();
+          } else {
+              alert('No enrollment found for student : ${studentName}');
+          }
+      }
+  }
+
+  // Set today's date as default for received_date
+  document.getElementById('received_date').valueAsDate = new Date();
+</script>
+
+</body>
+</html>

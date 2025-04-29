@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student ID Card</title>
+    <style>
+        .id-card {
+            width: 350px;
+            height: 220px;
+            border: 1px solid #000;
+            padding: 12px;
+            position: relative;
+            background: white;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        .logo {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+        .college-name {
+            position: absolute;
+            left: 75px;
+            top: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .reg-no {
+            position: absolute;
+            left: 75px;
+            top: 35px;
+            font-size: 11px;
+        }
+        .website {
+            position: absolute;
+            left: 75px;
+            top: 48px;
+            font-size: 11px;
+        }
+        .student-name {
+            position: absolute;
+            left: 15px;
+            top: 85px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .course {
+            position: absolute;
+            left: 15px;
+            top: 105px;
+            font-size: 12px;
+        }
+        .student-id {
+            position: absolute;
+            left: 15px;
+            top: 125px;
+            font-size: 12px;
+        }
+        .photo {
+            position: absolute;
+            right: 15px;
+            top: 60px;
+            width: 85px;
+            height: 85px;
+            border: 1px solid #ccc;
+            object-fit: cover;
+        }
+        .validity {
+            position: absolute;
+            left: 15px;
+            bottom: 30px;
+            font-size: 11px;
+        }
+        .signature {
+            position: absolute;
+            bottom: 25px;
+            right: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .signature-name {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .download-btn {
+            display: block;
+            width: 180px;
+            margin: 15px auto;
+            padding: 8px;
+            background: #4B0082;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="id-card">
+        {% load static %}
+        <img src="{% static 'images/image.jpg' %}" class="logo" alt="CTF Logo">
+        <div class="college-name">Computer Technology Foundation</div>
+        <div class="reg-no">Regd No E-38007</div>
+        <div class="website">ctfglobal.in</div>
+        <div class="student-name">{{ student.name }}</div>
+        <div class="course">Course: {{ course.course_name }}</div>
+        <div class="student-id">Enrollment ID: {{ idcard.enrollment.enrollment_number }}</div>
+        {% if student.photo %}
+        <img src="{{ student.photo.url }}" class="photo" alt="Student Photo">
+        {% endif %}
+        <div class="validity">Valid up to June 2025</div>
+        <div class="signature">Director</div><br><br>
+        <div class="signature-name">Hemang Raval</div>
+    </div>
+    <a href="{% url 'download_idcard' admin_id=id card_id=idcard.card_id %}" class="download-btn">Download ID Card</a>
+</body>
+</html>

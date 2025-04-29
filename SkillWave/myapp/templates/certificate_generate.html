@@ -1,0 +1,436 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href='tfavicon.png'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Cedarville+Cursive&family=Charm:wght@400;700&family=Dancing+Script:wght@400..700&family=Imperial+Script&family=Lavishly+Yours&family=Monsieur+La+Doulaise&family=Pinyon+Script&family=Playwrite+MX+Guides&family=Sacramento&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Display+Playfair:wght@400;700&family=Inter:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+  {% load static %}
+  <style>
+    .bc {
+      background-image: url("{% static 'images/hero-img-1-min.jpg' %}");
+    }
+
+    .certificate-container {
+      font-family: 'Times New Roman', serif;
+      text-align: center;
+      border: 12px solid black;
+      width: 80%;
+      margin: 40px auto;
+      padding: 10px;
+      background-color: rgb(230, 229, 229);
+      box-shadow: 5px 5px 20px rgba(0, 0, 255, 0.3);
+      position: relative;
+    }
+
+    .certificate-title {
+      font-size: 55px;
+      font-weight: bold;
+      color: rgb(54, 126, 227);
+      text-transform: uppercase;
+      text-shadow: 2px 2px 5px rgba(0, 0, 255, 0.2);
+      margin-top: 100px;
+    }
+
+    .certificate-body {
+      font-size: 22px;
+      margin-top: 20px;
+      font-style: italic;
+    }
+
+    .highlight {
+      font-weight: bold;
+      font-size: 26px;
+      color: black;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .highlight1 {
+      color: black;
+      font-size: 20px;
+    }
+    /* .footer {
+      margin-top: 40px;
+      font-size: 18px;
+      border-top: 2px solid navy;
+      padding-top: 10px;
+    } */
+
+    .logo {
+      width: 150px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .ctf-logo {
+      width: 150px;
+      position: absolute;
+      right: 50px;
+      top: 20px;
+    }
+
+    .signature {
+      margin-top: 40px;
+      position: relative;
+      width: 30%;
+      margin-left: 70%;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .signature p {
+      text-align: center;
+    }
+
+
+    .curved-text {
+      position: relative;
+      display: inline-block;
+      margin: 0 auto;
+      font-size: 80px;
+    }
+
+    .bottom {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+
+    .tangerine-regular {
+      font-family: "Tangerine", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .tangerine-bold {
+      font-family: "Tangerine", cursive;
+      font-weight: 700;
+      font-style: normal;
+    }  
+  </style>
+  
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <title>SkillWave Free Bootstrap Template by Untree.co</title>
+
+</head>
+
+<body>
+
+  <div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+
+  <nav class="site-nav mb-5" style="background-color: #007bff;">
+    <div class="pb-2 top-bar mb-3">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-lg-6">
+            <img src="../../static/images/image.jpg" style="height: 35px; width: auto; margin-right: 15px;">
+            <a href="#" class="small mr-3"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block">9227774545</span></a> 
+            <a href="#" class="small mr-3"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block">ctfindia@gmail.com</span></a>
+            <a href="{% url 'member_logout' id %}" class="large mr-3">
+              <span class="uil uil-signout"></span> 
+              <span class="d-none d-lg-inline-block">Logout</span>
+            </a>
+          </div>
+
+          
+          
+          <div class="col-6 col-lg-3 text-right" style="color: aliceblue;">Member : {{ member.member_name }}</div>
+          <div class="col-6 col-lg-3 text-right" style="color: aliceblue;">Admin : {{ admin.name }}</div>
+          <!-- <div class="col-6 col-lg-3 text-right" style="color: aliceblue;">logout</div> -->
+
+        </div>
+      </div>
+    </div>
+    <div class="sticky-nav js-sticky-header" style="background-color: #007bff;">
+      <div class="container position-relative">
+        <div class="site-navigation text-center">
+          <a href="{% url 'index' id %}" class="logo menu-absolute m-0">SkillWave<span class="text-primary"></span></a>
+
+          <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
+            <li class="active"><a href="{% url 'index' id %}">Home</a></li>
+            <li class="has-children">
+              <a href="#">Student</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'student_registration' id %}">Register Student</a></li>
+                <li><a href="{% url 'student_list' id %}">Student List</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="#">Course</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'course_registration' id %}">Add New Course</a></li>
+                <li><a href="{% url 'course_list' id %}">Course list</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="#">Enrollment</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'enrollment_registration' id %}">New Enrollment</a></li>
+                <li><a href="{% url 'enrollment_list' id %}">Enrollment list</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="#">Idcard</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'generate_idcard' id %}">Generate Idcard</a></li>
+                <li><a href="{% url 'idcard_list' id %}">Idcard list</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="#">Fees</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'fee_collection' id %}">Fees Collection</a></li>
+                <li><a href="{% url 'fee_list' id %}">Fees list</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="#">Certificate</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'enrollment_list' id %}">Generate Certificate</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <a href="#" class="btn-book btn btn-secondary btn-sm menu-absolute">Enroll Now</a>
+
+          <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
+            data-toggle="collapse" data-target="#main-navbar">
+            <span></span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div style="margin-top: 150px;"></div>
+
+
+
+  <!-- Certificate Preview -->
+  <div class="container">
+    <div class="certificate-container">
+      <div style="  text-align: center; margin: auto;">
+        <svg id="svg2" viewBox="0 0 380 150" style="margin-left: 100px;">
+          <text style="fill: rgb(154, 50, 50); font-family: Birthstone; font-size: 100px; white-space: pre;"
+            transform="matrix(1, 0, 0, 1, -66.3625, -104.521)">
+            <textPath href="#text-path-0">Certificate</textPath>
+          </text>
+          <defs>
+            <style bx:fonts="Birthstone">
+              @import url(https://fonts.googleapis.com/css2?family=Birthstone%3Aital%2Cwght%400%2C400&amp;display=swap);
+            </style>
+            <path id="text-path-0"
+              d="M 83.78299713134766 217.17903204525217 Q 238.92359161376953 122.14891052246094 394.0641860961914 217.17903204525217" />
+          </defs>
+        </svg>
+      </div>
+      <div style="float: left; margin: 0 0 -10px 20px; text-align: center;">
+        <img src="../../static/images/CTF1.jpg" alt="iso" height="100" width="150"/>
+        <p class="highlight1" style="font-size: 16px;">An ISO 9001-2008 Organization</p>
+      </div>
+      <!-- QR Code -->
+      <!-- <div style="position: absolute; right: 30px; top: 30px;">
+        <img src="../../static/images/student_verification_login.jpg" alt="" width="80" height="80" />
+      </div> -->
+      <div style="position: absolute; left: 50%; transform: translateX(-50%);  text-align: center;">
+        <div
+          style=" position: relative; display: flex; flex-direction: column; align-items: center; margin-top: -80px; ">
+          <div>
+            <img src="../../static/images/CTF.png" alt="" width="200" height="200" />
+          </div>
+        </div>
+      </div>
+      <p style="margin-top: 150px; font-size: 40px; color: rgb(3, 164, 217);" class="tangerine-bold">This Is To Certify That</p>
+      <h2 style="  font-family: Arial, Helvetica, sans-serif; font-weight: bold;">{{ student_name|default:"THAKOR JANAKIBEN DASHRATHJI" }}</h2>
+      <p style="font-size: 40px; color: rgb(3, 164, 217);" class="tangerine-bold">Has Completed a Training Of</p>
+      <h2 class="highlight" style="color: rgb(3, 164, 217);">{{ course_name|default:"CERTIFICATE IN COMPUTER CONCEPT (CCC)" }}</h2>
+      <p style="font-size: 40px; color: rgb(3, 164, 217);" class="tangerine-bold">With <span class="highlight">"A"</span> Grade.</p>
+
+      <div class="certificate-body">
+        <p><b>Course Duration:</b> June 2024 to July 2024</p>
+        <p><b>Date Of Issue:</b> 24th August 2024</p>
+      </div>
+
+      <!-- QR Code -->
+      <div style="position: center 30px; bottom: 30px;">
+        <img src="../../static/images/student_verification_login.jpg" alt="" width="80" height="80" />
+      </div>
+
+      <div class="signature">
+        <!-- <img src="../../static/images/CTF3.png" alt="" width="200" height="200" /> -->
+        <p>Authorized Signatory</p>
+        <p><b>Hemang Raval</b><br>(Managing Trustee)</p>
+        <!-- <p style="font-size: 15px;">www.challenge.co.in * info@challenge.co.in</p> -->
+
+      </div>
+      <div class="bottom" style="position: relative; height: 300px;">
+        <div class="highlight1">
+            <img src="../../static/images/CTF2.png" alt="" width="400" height="200" />
+            <p style="font-size: 20px;">B-19 Mangaltirth Complex, Dharnidhar,<br> Vasna, Ahmedabad - Gujarat - 380007
+              <br>Ph: (079) 26642280 - 65104545 - 4546
+            </p>
+        </div>
+        <div class="highlight1">
+          <div style="position: absolute; bottom: 0; ">
+            <p style="font-size: 20px; font-weight: bold; font-family: 'Times New Roman', Times, serif; margin-left: 10px;">www.challenge.co.in * info@challenge.co.in </p>
+            <ul style="text-align: left;">
+              <li>CCC Course Contains Based On Circular CRR-10-2007-120320.G.P (Annexure 1)</li><br/>
+              <li>Challenge Computer Center is Authorized Center For "CCC" Training As Per Circular TRG/2006/2639/IT By
+                Govt. Of. Gujarat</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+
+
+  <div class="site-footer">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-3 mr-auto">
+          <div class="widget">
+            <h3>About Us<span class="text-primary">.</span> </h3>
+            <p>SkillWave is a cutting-edge learning platform designed to provide industry-relevant education. We offer expert-led courses, hands-on training, and career-focused learning opportunities.</p>
+          </div> <!-- /.widget -->
+          <div class="widget">
+            <h3>Connect</h3>
+            <ul class="list-unstyled social">
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
+              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              <li><a href="#"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-linkedin"></span></a></li>
+              <li><a href="#"><span class="icon-pinterest"></span></a></li>
+              <li><a href="#"><span class="icon-dribbble"></span></a></li>
+            </ul>
+          </div> <!-- /.widget -->
+        </div> <!-- /.col-lg-3 -->
+
+        <div class="col-lg-2 ml-auto">
+          <div class="widget">
+            <h3>Projects</h3>
+            <ul class="list-unstyled float-left links">
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">HTML5</a></li>
+              <li><a href="#">CSS3</a></li>
+              <li><a href="#">jQuery</a></li>
+              <li><a href="#">Bootstrap</a></li>
+            </ul>
+          </div> <!-- /.widget -->
+        </div> <!-- /.col-lg-3 -->
+
+        <div class="col-lg-3">
+          <div class="widget">
+            <h3>Gallery</h3>
+            <ul class="instafeed instagram-gallery list-unstyled">
+              <li><a class="instagram-item" href="static/images/gal_1.jpg" data-fancybox="gal"><img
+                    src="{% static 'images/gal_1.jpg' %}" alt="" width="72" height="72"></a>
+              </li>
+              <li><a class="instagram-item" href="static/images/gal_2.jpg" data-fancybox="gal"><img
+                    src="{% static 'images/gal_2.jpg' %}" alt="" width="72" height="72"></a>
+              </li>
+              <li><a class="instagram-item" href="static/images/gal_3.jpg" data-fancybox="gal"><img
+                    src="{% static 'images/gal_3.jpg' %}" alt="" width="72" height="72"></a>
+              </li>
+              <li><a class="instagram-item" href="static/images/gal_4.jpg" data-fancybox="gal"><img
+                    src="{% static 'images/gal_4.jpg' %}" alt="" width="72" height="72"></a>
+              </li>
+              <li><a class="instagram-item" href="static/images/gal_5.jpg" data-fancybox="gal"><img
+                    src="{% static 'images/gal_5.jpg' %}" alt="" width="72" height="72"></a>
+              </li>
+              <li><a class="instagram-item" href="static/images/gal_6.jpg" data-fancybox="gal"><img
+                    src="{% static 'images/gal_6.jpg' %}" alt="" width="72" height="72"></a>
+              </li>
+            </ul>
+          </div> <!-- /.widget -->
+        </div> <!-- /.col-lg-3 -->
+
+
+        <div class="col-lg-3">
+          <div class="widget">
+            <h3>Contact</h3>
+            <address>First Floor, "B" Mangaltirth Complex, Nr. Overbridge, Dharnidhar BRTS, Vasna, Ahmedabad-38007, Gujarat</address>
+            <ul class="list-unstyled links mb-4">
+              <li><a href="tel://11234567890">+91 9227774545</a></li>
+              <li><a href="tel://11234567890">+91 9227778181</a></li>
+              <li><a href="mailto:info@mydomain.com">ctfindia@gmail.com</a></li>
+            </ul>
+          </div> <!-- /.widget -->
+        </div> <!-- /.col-lg-3 -->
+
+      </div> <!-- /.row -->
+
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love
+            by <a href="https://untree.co">Untree.co</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+            <!-- License information: https://untree.co/license/ -->
+        </div>
+      </div>
+    </div> <!-- /.container -->
+  </div> <!-- /.site-footer -->
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>
