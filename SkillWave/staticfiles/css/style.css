@@ -1658,3 +1658,27 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
         color: #ffffff; }
   .site-footer .copyright {
     color: rgba(255, 255, 255, 0.5); }
+.site-footer .copyright a {
+  color: #ffffff; }
+  .site-footer .copyright a:hover {
+    color: #2f84ec; }
+    .site-footer .copyright a:active {
+      color: #2f84ec; }
+      .site-footer .copyright a:visited {
+        color: #2f84ec; }
+        .site-footer .copyright a {
+          text-decoration: none; }
+          .site-footer .copyright {
+            font-size: 12px;
+            margin-bottom: 20px; }
+            .site-footer .copyright a {
+              color: #ffffff; }
+              .site-footer .copyright a:hover {
+                color: #2f84ec; }
+                .site-footer .copyright a:active {
+                  color: #2f84ec; }
+                  .site-footer .copyright a:visited {
+                    color: #2f84ec; }
+                    .site-footer .copyright a {
+                      text-decoration: none; }
+                      
