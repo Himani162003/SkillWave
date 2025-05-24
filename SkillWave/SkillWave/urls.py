@@ -20,6 +20,15 @@ from django.conf.urls.static import static
 from django.urls import path, include
 
 
+from django.contrib.auth import get_user_model
+
+def create_admin_user():
+    User = get_user_model()
+    if not User.objects.filter(username='admin').exists():
+        User.objects.create_superuser('admin', 'admin@example.com', 'admin123')
+
+create_admin_user()  # Run on startup
+
 
     
 urlpatterns = [
