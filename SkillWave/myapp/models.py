@@ -56,7 +56,7 @@ class Course(models.Model):
 
 class Enrollment(models.Model):
     enroll_id = models.AutoField(primary_key=True)  # Fixed spelling: enorll_id → enroll_id
-    enrollment_number = models.IntegerField(verbose_name="Enrollment Number")
+    enrollment_number = models.CharField(max_length=30,verbose_name="Enrollment Number")
     admin = models.ForeignKey(Admin, on_delete = models.CASCADE )
     student_id = models.ForeignKey(Student, verbose_name="name", on_delete=models.CASCADE, related_name="enrollments")
     course_name = models.ForeignKey(Course, verbose_name="course_name", on_delete=models.CASCADE, related_name="enrollments")
