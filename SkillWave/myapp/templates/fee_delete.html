@@ -56,10 +56,12 @@
             <p><strong>Fees:</strong> <span id="previewStudentEmail">₹{{ fees.paid_amount }}</span></p>
           </div>
 
+          
+
           <!-- Delete Form with Confirmation Modal -->
-          <form method="POST" id="feesForm" action="#">
+          <form method="POST" id="feesForm" action="">
             {% csrf_token %} 
-            <button type="button" class="btn btn-danger w-100 mt-3" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">Yes, Delete</button>
+            <button type="submit" class="btn btn-danger w-100 mt-3" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">Yes, Delete</button>
           </form>
           <a href="{% url 'fee_list' id %}" class="btn btn-secondary w-100 mt-2">Cancel</a>
       </div>

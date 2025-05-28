@@ -19,8 +19,26 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'cloudinary',
+    'cloudinary_storage',
     
 ]
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'Root',
+    'API_KEY': '256563317573511',
+    'API_SECRET': 'u6NC9tdJw2XnnCdBqXtP-6ufoEA',
+}
+# Cloudinary settings for production
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
