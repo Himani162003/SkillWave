@@ -69,6 +69,10 @@ def Admin_Register(request):
 # Create your views here.
 def Member_Register(request,admin_id): 
     print("Register view accessed")  # Debugging line to check if the view is called
+    admin = models.Admin.objects.get(admin_id=admin_id)
+    context = {
+        'id' : admin.admin_id,  # Ensure this is correctly set without trailing spaces
+    }
     
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -94,7 +98,7 @@ def Member_Register(request,admin_id):
             return redirect('admin_dashboard', admin_id=admin_id)  # Redirect to the admin dashboard after successful registration
         else:
             return render(request,'member_register.html', {'error': "Password don't match with Re-type Password"})
-    return render(request,'member_register.html')
+    return render(request,'member_register.html',context)
 
 
 
